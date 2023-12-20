@@ -33,14 +33,14 @@ table
 }
 td, th
 {
-    border: 1px solid #F1F1F1;
+    border: 1px solid #5db3e6;
     padding: 5px;
     text-align: left;
     vertical-align: top;
 }
 
 .ligne_1 {background-color: #FFFFFF;}
-.ligne_2 {background-color: #F1F1F1;}
+.ligne_2 {background-color: #5db3e6;}
 
 th{text-align: center; background-color: #333333; color:white;}
 
