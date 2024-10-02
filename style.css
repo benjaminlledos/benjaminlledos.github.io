@@ -84,7 +84,7 @@ em{font-weight: bold; font-style: normal; }
 
 
 #nav li {margin-bottom: 30px; margin-top: 0px; font-size: 1em;}
-#nav a {color: #373C3C;}
+#nav a {color: white;}
 #nav a:hover {color: white; border-bottom: white 1px; text-decoration: none;}
 #nav .current a {color: white; border-bottom: white 1px;}
  
