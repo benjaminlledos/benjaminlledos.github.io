@@ -57,6 +57,7 @@ em{font-weight: bold; font-style: normal; }
 
 #bande_gauche
 {
+	color: white;
 	text-align: center;
 	background-color:  #e84e24;
 	position: fixed;
