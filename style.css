@@ -85,11 +85,11 @@ em{font-weight: bold; font-style: normal; }
 
 #nav li {margin-bottom: 30px; margin-top: 0px; font-size: 1em;}
 #nav a {color: #373C3C;}
-#nav a:hover {color: #922B21; border-bottom: solid #922B21 1px; text-decoration: none;}
-#nav .current a {color: #922B21; border-bottom: solid #922B21 1px;}
+#nav a:hover {color: white; border-bottom: white 1px; text-decoration: none;}
+#nav .current a {color: white; border-bottom: white 1px;}
  
-#version_anglaise a{color: #922B21; font-size: 0.9em;}
-#version_anglaise a:hover{color: #922B21; text-decoration: underline;}
+#version_anglaise a{color: white; font-size: 0.9em;}
+#version_anglaise a:hover{color: white; text-decoration: underline;}
 
 #contenu
 {
