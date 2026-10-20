@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Benjamin Lledos — Maître de conférences at Nîmes Université. Research in the calculus of variations, elliptic PDEs and geometric measure theory.">
+  <meta name="google-site-verification" content="PXSjFpJO_j4LvzjVAPyVhn_G9kYIzZ1da10D6CMcoWg">
+  <meta name="theme-color" content="#181818">
+  <title>Benjamin Lledos — Nîmes Université</title>
+  <!-- All styles and scripts are in this file: no jQuery or external stylesheet required. -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #242424;
+      --muted: #636363;
+      --accent: #E87500;
+      --accent-strong: #B94D00;
+      --soft-accent: #FFF0E3;
+      --paper: #ffffff;
+      --background: #F8F7F5;
+      --stroke: #E7E1DC;
+      --shadow: 0 18px 46px rgba(0, 0, 0, .06);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--background); color: var(--ink); font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--accent-strong); text-underline-offset: 3px; }
+    a:hover { color: #873800; }
+    a:focus-visible, [role="tab"]:focus-visible, summary:focus-visible { outline: 3px solid #FFA54C; outline-offset: 4px; }
+    img { max-width: 100%; }
+    .skip-link { position: absolute; z-index: 99; top: -60px; left: 12px; padding: 9px 15px; background: var(--paper); border-radius: 8px; }
+    .skip-link:focus { top: 12px; }
+    .layout { display: grid; grid-template-columns: minmax(245px, 295px) minmax(0, 1fr); max-width: 1330px; margin: 0 auto; min-height: 100vh; gap: 40px; padding: 34px 36px 56px; }
+    .profile { align-self: start; position: sticky; top: 30px; }
+    .profile-inner { background: #181818; color: #fff; border-radius: 20px; padding: 31px 28px; box-shadow: 0 16px 36px rgba(0,0,0,.15); }
+    .avatar { width: 110px; height: 110px; display: block; object-fit: cover; object-position: center 24%; border-radius: 50%; border: 4px solid rgba(255,255,255,.85); background: #E9E4DE; margin-bottom: 23px; }
+    .eyebrow { font-size: .73rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 780; }
+    .profile .eyebrow { color: #FFAB61; }
+    .profile h1 { color: var(--accent); font: 500 clamp(1.8rem, 3vw, 2.17rem)/1.17 Georgia, 'Times New Roman', serif; margin: 10px 0 16px; letter-spacing: -.025em; }
+    .role { font-weight: 660; margin: 0; }
+    .university { margin: 1px 0 0; color: #DFDFDF; }
+    .profile hr { border: none; border-top: 1px solid rgba(255,255,255,.21); margin: 25px 0 20px; }
+    .research-fields { font-size: .86rem; line-height: 1.65; color: #D6D6D6; margin: 0; }
+    .profile-contact { display: inline-flex; align-items: center; gap: 7px; margin-top: 23px; color: #fff; font-weight: 650; font-size: .91rem; text-decoration-thickness: 1px; }
+    .profile-contact:hover { color: #FFBB83; }
+    .main { min-width: 0; }
+    .tabs-wrapper { background: var(--paper); border: 1px solid var(--stroke); border-radius: 14px 14px 0 0; padding: 8px; }
+    .tabs { display: flex; gap: 3px; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: thin; }
+    .tabs a { flex: 0 0 auto; padding: 12px 15px; border-radius: 9px; color: var(--muted); text-decoration: none; white-space: nowrap; font-size: .90rem; font-weight: 650; transition: color .15s, background .15s; }
+    .tabs a:hover { background: #FFF1E5; color: var(--ink); }
+    .tabs a[aria-selected="true"] { background: var(--accent-strong); color: #fff; }
+    .content { background: var(--paper); border: 1px solid var(--stroke); border-top: none; border-radius: 0 0 18px 18px; padding: clamp(24px, 4.2vw, 52px); min-height: 420px; box-shadow: var(--shadow); }
+    .content [hidden] { display: none !important; }
+    .panel { animation: appear .18s ease-out; }
+    @keyframes appear { from { opacity: .5; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .panel h2 { color: var(--accent-strong); font: 500 clamp(1.75rem, 3.1vw, 2.35rem)/1.22 Georgia, 'Times New Roman', serif; letter-spacing: -.02em; margin: 0 0 27px; padding-bottom: 19px; border-bottom: 1px solid var(--stroke); }
+    .panel h3 { font-size: 1.14rem; font-weight: 750; margin: 35px 0 12px; line-height: 1.4; }
+    .panel p { margin: 0 0 17px; }
+    .panel ul { padding-left: 23px; margin: 12px 0 24px; }
+    .panel li { margin-bottom: 12px; padding-left: 2px; }
+    .panel li::marker { color: var(--accent); }
+    .intro-highlight { border-left: 4px solid var(--accent); background: #FFF4EA; padding: 20px 22px; border-radius: 0 9px 9px 0; margin-bottom: 25px; }
+    .intro-highlight p { margin: 0; }
+    .publication-list { padding-left: 0 !important; list-style: none; }
+    .publication-list li { padding: 0 0 15px; margin-bottom: 17px; border-bottom: 1px solid #ECE7E3; }
+    .publication-list li:last-child { border-bottom: 0; }
+    .publication-list a { font-weight: 650; }
+    .small-note { color: var(--muted); }
+    .timeline { list-style: none; padding-left: 0 !important; }
+    .timeline li { position: relative; margin: 0 0 20px 0; padding: 0 0 18px 23px; border-left: 2px solid var(--stroke); }
+    .timeline li::before { content: ""; position: absolute; left: -6px; top: 9px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+    .timeline li:last-child { border-left-color: transparent; }
+    .timeline strong { color: var(--ink); }
+    .year { display: inline-block; font-size: .74rem; font-weight: 800; letter-spacing: .05em; padding: 1px 8px; margin: 0 8px 5px 0; color: var(--accent-strong); background: var(--soft-accent); border-radius: 5px; }
+    .course-year { border: 1px solid var(--stroke); border-radius: 10px; margin-bottom: 12px; padding: 0 17px; }
+    .course-year summary { cursor: pointer; padding: 16px 0; font-weight: 710; }
+    .course-year summary::marker { color: var(--accent); }
+    .course-year[open] summary { color: var(--accent-strong); }
+    .course-year ul { margin-top: 0; }
+    .download-link { display: inline-flex; gap: 9px; align-items: center; padding: 12px 17px; border-radius: 8px; background: var(--accent-strong); color: white; font-weight: 700; text-decoration: none; margin: 4px 0 8px; }
+    .download-link:hover { color: white; background: #913C00; }
+    .contact-panel { border: 1px solid var(--stroke); border-radius: 11px; padding: 21px 23px; background: #FBF8F4; }
+    .contact-panel p { margin: 0 0 5px; color: var(--muted); }
+    .contact-panel a { font-size: 1.06rem; font-weight: 760; overflow-wrap: anywhere; }
+    .page-footer { padding: 20px 0 0; text-align: right; font-size: .82rem; color: #777777; }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
+      .profile { position: static; }
+      .profile-inner { display: grid; grid-template-columns: 83px 1fr; column-gap: 20px; align-items: center; padding: 21px 23px; }
+      .avatar { width: 83px; height: 83px; margin: 0; grid-row: span 4; }
+      .profile .eyebrow, .profile h1, .profile .role, .profile .university { grid-column: 2; }
+      .profile h1 { font-size: 1.65rem; margin: 3px 0 7px; }
+      .profile hr, .research-fields, .profile-contact { display: none; }
+    }
+    @media (max-width: 540px) {
+      .layout { padding: 12px 12px 30px; gap: 13px; }
+      .profile-inner { grid-template-columns: 64px 1fr; gap: 1px 13px; padding: 16px; border-radius: 13px; }
+      .avatar { width: 64px; height: 64px; }
+      .profile h1 { font-size: 1.35rem; }
+      .role, .university { font-size: .84rem; }
+      .profile .eyebrow { font-size: .60rem; }
+      .tabs a { padding: 10px 12px; font-size: .86rem; }
+      .content { padding: 24px 18px; }
+      .panel li { margin-bottom: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="layout">
+    <aside class="profile" aria-label="Profile">
+      <div class="profile-inner">
+        <img class="avatar" src="PhotoPW.jpg" alt="Portrait of Benjamin Lledos" width="110" height="110">
+        <h1>Benjamin Lledos</h1>
+        <p class="role">Maître de conférences</p>
+        <p class="university">Nîmes Université</p>
+        <hr>
+        <p class="research-fields">Calculus of variations · Elliptic PDEs · Geometric measure theory</p>
+        <a class="profile-contact" href="mailto:benjamin.lledos@unimes.fr">✉ &nbsp; benjamin.lledos@unimes.fr</a>
+      </div>
+    </aside>
+
+    <main class="main" id="main-content">
+      <div class="tabs-wrapper">
+        <nav class="tabs" id="main-tabs" role="tablist" aria-label="Website sections">
+          <a id="tab-presentation" role="tab" href="#presentation" aria-controls="presentation" aria-selected="true" tabindex="0">Presentation</a>
+          <a id="tab-research" role="tab" href="#research" aria-controls="research" aria-selected="false" tabindex="-1">Research</a>
+          <a id="tab-activite" role="tab" href="#activite" aria-controls="activite" aria-selected="false" tabindex="-1">Talks</a>
+          <a id="tab-orga" role="tab" href="#orga" aria-controls="orga" aria-selected="false" tabindex="-1">Organization</a>
+          <a id="tab-enseignement" role="tab" href="#enseignement" aria-controls="enseignement" aria-selected="false" tabindex="-1">Teaching</a>
+          <a id="tab-cv" role="tab" href="#cv" aria-controls="cv" aria-selected="false" tabindex="-1">CV</a>
+          <a id="tab-contact" role="tab" href="#contact" aria-controls="contact" aria-selected="false" tabindex="-1">Contact</a>
+        </nav>
+      </div>
+
+      <div class="content" id="content">
+        <section class="panel" id="presentation" role="tabpanel" aria-labelledby="tab-presentation" tabindex="-1">
+          <h2>Presentation</h2>
+          <div class="intro-highlight">
+            <p>Welcome to my webpage. My research areas are the <strong>calculus of variations</strong>, <strong>elliptic PDEs</strong> and <strong>geometric measure theory</strong>.</p>
+          </div>
+          <p>I am interested in the <em>uniqueness, regularity and qualitative properties of solutions to minimization problems in the calculus of variations or elliptic PDEs, Gamma-convergence for phase fields and homogenization</em>.</p>
+          <p>Since September 2024, I have been a maître de conférences (associate professor) at the Nîmes Université, working in the <a href="https://mipa.unimes.fr/" target="_blank" rel="noopener noreferrer">Laboratoire mathématiques, informatique, physique et applications (MIPA)</a>.</p>
+          <p>Previously, I was a postdoctoral researcher at the Institut de recherche en mathématique et physique (IRMP), UC Louvain, under the supervision of Heiner Olbermann.</p>
+          <p>I defended my Ph.D. in July 2023, supervised by Pierre Bousquet at the Institut de Mathématiques de Toulouse.</p>
+          <p>I am the organizer of the <a href="https://indico.math.cnrs.fr/category/833/" target="_blank" rel="noopener noreferrer">MIPA seminar</a>.</p>
+          <p>This website gathers information and documents about my research, teaching activities and academic background.</p>
+        </section>
+
+        <section class="panel" id="research" role="tabpanel" aria-labelledby="tab-research" tabindex="-1">
+          <h2>Research</h2>
+          <h3>Current research</h3>
+          <ul>
+            <li>Uniqueness for the solutions of minimization problems with linear growth (in preparation).</li>
+            <li>C<sup>1</sup> regularity for Lipschitz solutions of degenerate elliptic PDEs (in preparation).</li>
+            <li>Gamma-convergence of currents for phase fields (in preparation).</li>
+            <li>Stochastic homogenization of multiparameter integrals (in preparation).</li>
+          </ul>
+
+          <h3>Preprints</h3>
+          <ul class="publication-list">
+            <li><a href="https://arxiv.org/abs/2410.14995" target="_blank" rel="noopener noreferrer"><cite>Discarding Lavrentiev's Gap in Non-automonous and Non-Convex Variational Problems</cite></a>, with Michał Borowski, Pierre Bousquet, Iwona Chlebicka &amp; Błażej Miasojedow (2024).</li>
+            <li><a href="https://hal.science/hal-05641454" target="_blank" rel="noopener noreferrer"><cite>Uniqueness of continuous solutions to a minimization problem in BV</cite></a> (2026).</li>
+            <li><a href="https://hal.science/hal-05465618" target="_blank" rel="noopener noreferrer"><cite>Homogenization of multiparameter integrals in the space of functions of bounded variation</cite></a>, with Jean-Philippe Mandallena (2026).</li>
+          </ul>
+
+          <h3>Publications and accepted papers</h3>
+          <ul class="publication-list">
+            <li><cite>Study of minimizers of problems with linear growth under bounded slope condition</cite>, accepted in <strong>Advances in Calculus of Variations</strong> (2026).</li>
+            <li><a href="https://link.springer.com/article/10.1007/s11565-025-00626-9" target="_blank" rel="noopener noreferrer"><cite>Continuity and Uniqueness for BV minimisers</cite></a>, with Pierre Bousquet, <strong>Annali della'universita di Ferrara</strong> (2025).</li>
+            <li><a href="https://epubs.siam.org/doi/10.1137/24M1679136" target="_blank" rel="noopener noreferrer"><cite>Interacting phase fields yielding phase separation on surfaces</cite></a>, with Roberta Marziani &amp; Heiner Olbermann, <strong>SIAM Journal on Mathematical Analysis</strong> (2025).</li>
+            <li><a href="https://aif.centre-mersenne.org/articles/10.5802/aif.3734/" target="_blank" rel="noopener noreferrer"><cite>A uniqueness result for a two-dimensional variational problem</cite></a>, <strong>Annales de l'Institut Fourier</strong> (2025).</li>
+            <li><a href="https://ambp.centre-mersenne.org/articles/10.5802/ambp.427/" target="_blank" rel="noopener noreferrer"><cite>Regularity of the stress field for degenerate and/or singular elliptic problems</cite></a>, <strong>Annales Mathématiques Blaise Pascal</strong> (2024).</li>
+            <li><a href="https://doi.org/10.1051/cocv/2023079" target="_blank" rel="noopener noreferrer"><cite>A uniqueness result for a non-strictly convex problem in the calculus of variations</cite></a>, <strong>ESAIM: COCV</strong> (2023).</li>
+            <li><a href="https://www.heldermann.de/JCA/JCA31/JCA311/jca31008.htm" target="_blank" rel="noopener noreferrer"><cite>A uniqueness result for a translation invariant problem in the calculus of variations</cite></a>, <strong>Journal of Convex Analysis</strong> (2024).</li>
+          </ul>
+
+          <h3>Ph.D. thesis</h3>
+          <ul class="publication-list">
+            <li><a href="https://hal.science/tel-04253464" target="_blank" rel="noopener noreferrer"><cite>Qualitative properties for solutions of degenerate and/or singular problems in the calculus of variations (Propriétés qualitatives de solutions de problèmes dégénérés et/ou singuliers en calcul des variations)</cite></a>, defended in July 2023.</li>
+          </ul>
+        </section>
+
+        <section class="panel" id="activite" role="tabpanel" aria-labelledby="tab-activite" tabindex="-1">
+          <h2>Seminars and conferences</h2>
+          <ul class="timeline">
+            <li><span class="year">2026</span><strong>Calculus of Variations in Materials Science</strong>, Institute of Mathematics of the Polish Academy of Sciences, Będlewo, Poland, 7–12 June 2026.</li>
+            <li><span class="year">2025</span><strong>Oberseminar Angewandte Analysis</strong>, TU Dortmund (Angewandte Analysis), 25 June 2025.</li>
+            <li><span class="year">2025</span><strong>Journées annuelles de la fédération OcciMath</strong>, Nîmes Université (MIPA), 23 May 2025.</li>
+            <li><span class="year">2025</span><strong>AMAC seminar</strong>, Université Grenoble Alpes (LJK), 15 May 2025.</li>
+            <li><span class="year">2025</span><strong>Analysis and PDEs seminar</strong>, Université Toulouse 3 (IMT), 17 February 2025.</li>
+            <li><span class="year">2024</span><strong>GT Top</strong>, Marseille (FRUMAM), 12 December 2024.</li>
+            <li><span class="year">2024</span><strong>Conference in Calculus of Variations in Lille</strong>, Lille, 24–28 June 2024.</li>
+            <li><span class="year">2024</span><strong>Gdr CalVa seminar</strong>, Paris-Saclay (LMO), 4 March 2024.</li>
+            <li><span class="year">2023</span><strong>Analysis and PDEs seminar</strong>, UC Louvain (IRMP), 17 October 2023.</li>
+            <li><span class="year">2023</span><strong>Analysis and PDEs seminar</strong>, University of Warsaw, 25 May 2023.</li>
+            <li><span class="year">2022</span><strong>Analysis and PDEs seminar</strong>, Université Toulouse 3 (IMT), 19 September 2022.</li>
+            <li><span class="year">2021</span><strong>Workshop in calculus of variations</strong>, Université de Lorraine, Nancy, 10 December 2021.</li>
+          </ul>
+        </section>
+
+        <section class="panel" id="orga" role="tabpanel" aria-labelledby="tab-orga" tabindex="-1">
+          <h2>Organization of events</h2>
+          <ul class="timeline">
+            <li><span class="year">2026</span><strong><a href="https://indico.math.cnrs.fr/event/16465/" target="_blank" rel="noopener noreferrer">Journées nîmoises d'optimisation de forme</a></strong>, MIPA, Nîmes, France, 15–16 June 2026.</li>
+            <li><span class="year">Since 2024</span><strong><a href="https://indico.math.cnrs.fr/category/833/" target="_blank" rel="noopener noreferrer">Mathematical seminar</a></strong>, MIPA, Nîmes, France.</li>
+          </ul>
+        </section>
+
+        <section class="panel" id="enseignement" role="tabpanel" aria-labelledby="tab-enseignement" tabindex="-1">
+          <h2>Teaching</h2>
+          <details class="course-year" open>
+            <summary>2025–2026 · Nîmes Université</summary>
+            <ul>
+              <li>Linear algebra lectures and tutorials, first year of BSc.</li>
+              <li>Complementary courses in mathematics, second year of BSc.</li>
+              <li>Differential calculus, second year of BSc.</li>
+              <li>Supervisor of G. Cortes, internship in third year of BSc.</li>
+            </ul>
+          </details>
+          <details class="course-year">
+            <summary>2024–2025 · Nîmes Université</summary>
+            <ul>
+              <li>Linear algebra lectures and tutorials, first year of BSc.</li>
+              <li>Complementary courses in mathematics, second year of BSc.</li>
+            </ul>
+          </details>
+          <details class="course-year">
+            <summary>2022–2023 · Université Paul Sabatier</summary>
+            <ul>
+              <li>8 hours of practical work (Python), linear algebra, first year of BSc.</li>
+              <li>30 hours of tutorials, mathematics, first year of BSc.</li>
+              <li>28 hours of tutorials, sets and logic, first year of BSc.</li>
+            </ul>
+          </details>
+          <details class="course-year">
+            <summary>2021–2022 · Université Paul Sabatier</summary>
+            <ul><li>66 hours of tutorials, mathematics, first year of BSc.</li></ul>
+          </details>
+          <details class="course-year">
+            <summary>2020–2021 · Université Paul Sabatier</summary>
+            <ul><li>60 hours of tutorials, mathematics, first year of BSc.</li></ul>
+          </details>
+        </section>
+
+        <section class="panel" id="cv" role="tabpanel" aria-labelledby="tab-cv" tabindex="-1">
+          <h2>Curriculum Vitae</h2>
+          <p>For a detailed version of my CV, download the PDF below.</p>
+          <a class="download-link" href="CV2026.pdf" download>↓ &nbsp; Download my CV (PDF)</a>
+          <h3>Education</h3>
+          <ul>
+            <li><strong>2020–2023:</strong> Ph.D. in mathematics, Institut de Mathématiques de Toulouse.</li>
+            <li><strong>2014–2020:</strong> Université de Toulouse III – Paul Sabatier.
+              <ul>
+                <li>MSc in mathematics, with high honours (2020).</li>
+                <li>Preparation year for the agrégation externe de mathématiques (2019).</li>
+                <li>First year of an MSc in mathematics (2018).</li>
+                <li>BSc in mathematics (2014–2017).</li>
+              </ul>
+            </li>
+          </ul>
+          <h3>Awards and scholarships</h3>
+          <ul><li><strong>2019:</strong> Agrégation externe de mathématiques.</li></ul>
+          <h3>Internships</h3>
+          <ul>
+            <li><strong>2020 (March–June):</strong> Four-month MSc internship at the Institut de Mathématiques de Toulouse, France, with Prof. Pierre Bousquet. <cite>Introduction to the calculus of variations.</cite></li>
+            <li><strong>2018:</strong> Internship at the Institut de Mathématiques de Toulouse, France, with Prof. Jean-Pierre Otal. <cite>On the Beltrami equation.</cite></li>
+            <li><strong>2017:</strong> Internship at the Institut de Mathématiques de Toulouse, France, with Prof. Grégory Faye. <cite>Study of ODEs.</cite></li>
+          </ul>
+        </section>
+
+        <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="-1">
+          <h2>Contact</h2>
+          <div class="contact-panel">
+            <p>Professional email</p>
+            <a href="mailto:benjamin.lledos@unimes.fr">benjamin.lledos@unimes.fr</a>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer">Benjamin Lledos · Nîmes Université</footer>
+    </main>
+  </div>
+
+  <script>
+    // The URL fragment (#research, #enseignement, etc.) still works as a direct link.
+    // If JavaScript is disabled, all sections remain readable in the page.
+    (() => {
+      'use strict';
+      const tabs = Array.from(document.querySelectorAll('#main-tabs [role="tab"]'));
+      const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
+      const defaultId = 'presentation';
+      const knownIds = new Set(panels.map(panel => panel.id));
+
+      function activate(id, scrollToTabs = false) {
+        const target = knownIds.has(id) ? id : defaultId;
+        tabs.forEach((tab, index) => {
+          const selected = panels[index].id === target;
+          tab.setAttribute('aria-selected', String(selected));
+          tab.tabIndex = selected ? 0 : -1;
+          panels[index].hidden = !selected;
+          if (selected) tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        });
+        if (scrollToTabs) {
+          const wrapper = document.querySelector('.tabs-wrapper');
+          const isMobile = window.matchMedia('(max-width: 900px)').matches;
+          if (isMobile) wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      function navigate(id, focusTab = false) {
+        if (window.location.hash !== '#' + id) {
+          window.history.pushState(null, '', '#' + id);
+        }
+        activate(id, true);
+        if (focusTab) {
+          const tab = tabs.find(tab => tab.getAttribute('aria-controls') === id);
+          if (tab) tab.focus({ preventScroll: true });
+        }
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', event => {
+          event.preventDefault();
+          navigate(tab.getAttribute('aria-controls'));
+        });
+        tab.addEventListener('keydown', event => {
+          let nextIndex;
+          switch (event.key) {
+            case 'ArrowRight': nextIndex = (index + 1) % tabs.length; break;
+            case 'ArrowLeft': nextIndex = (index - 1 + tabs.length) % tabs.length; break;
+            case 'Home': nextIndex = 0; break;
+            case 'End': nextIndex = tabs.length - 1; break;
+            default: return;
+          }
+          event.preventDefault();
+          navigate(tabs[nextIndex].getAttribute('aria-controls'), true);
+        });
+      });
+
+      const syncFromUrl = () => activate(decodeURIComponent(window.location.hash.slice(1)));
+      window.addEventListener('popstate', syncFromUrl);
+      window.addEventListener('hashchange', syncFromUrl);
+      syncFromUrl();
+    })();
+  </script>
+</body>
+</html>
